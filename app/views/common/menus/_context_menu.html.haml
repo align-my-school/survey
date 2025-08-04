@@ -3,10 +3,10 @@
   .dropdown
     .dropdown-trigger{ "data-bs-toggle" => "dropdown", href: "#", role: "button", "aria-expanded" => "false", "data-bs-display" => "static" }
       %span.fas.fa-ellipsis-h
-    .dropdown-menu{ style: "transform: translate(-135px, 28px) !important;" }
+    .dropdown-menu{ style: "transform: translate(-135px, 14px) !important;" }
       %ul
         - links.each do |text, values|
           - if values[:confirm_delete]
-            %li= link_to text, values[:link], :method => :delete, :data => { :confirm => 'Are you sure?' }
+            %li= link_to text, values[:link], data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}
           - else
             %li= link_to text, values[:link]
