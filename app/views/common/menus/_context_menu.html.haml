@@ -3,7 +3,7 @@
   .dropdown
     .dropdown-trigger{"data-bs-toggle" => "dropdown", type: "button"}
       %span.fas.fa-ellipsis-h
-    .dropdown-menu
+    .dropdown-menu{ style: "transform: translate(-135px, 28px) !important;" }
       %ul
         - links.each do |text, values|
           - if values[:confirm_delete]
