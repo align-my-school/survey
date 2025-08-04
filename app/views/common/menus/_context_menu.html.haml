@@ -1,7 +1,7 @@
 -links ||= []
 .context-menu
   .dropdown
-    .dropdown-trigger{"data-bs-toggle" => "dropdown", type: "button"}
+    .dropdown-trigger{ "data-bs-toggle" => "dropdown", href: "#", role: "button", "aria-expanded" => "false", "data-bs-display" => "static" }
       %span.fas.fa-ellipsis-h
     .dropdown-menu{ style: "transform: translate(-135px, 28px) !important;" }
       %ul
